@@ -24,5 +24,12 @@ choice (e.g.,MySQL, PostgreSQL, MongoDB, etc.).
     redeploy the application using docker-compose. Verify that the new feature is working
     as expected.   
     - In web/app/index.py file new feature is added and running docker-compose up again
-    
+ - Implement a backup strategy for the database. This can be achieved using a Docker
+    volume or by running a backup script periodically  
+    - Added volume feature in docker-compose.yml file now it will persist or save last image state even if docker is shutdown of somehow not working
+ - Implement a scaling strategy for the web application. This can be achieved by using the
+    docker-compose scale command to create multiple instances of the web service. Verify
+    that the web application is accessible and working correctly when scaled.
+    - docker-compose up -d --scale web=3 (any number)
+ 
     

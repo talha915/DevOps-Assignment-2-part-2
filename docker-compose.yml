@@ -21,9 +21,14 @@ services:
       MYSQL_DATABASE: my_database
       MYSQL_USER: my_user
       MYSQL_PASSWORD: my_password
+    volumes:
+      - my_database_volume:/var/lib/mysql  
     networks:
       - my_network
 
 networks:
   my_network:
     driver: bridge
+volumes:
+  my_database_volume:  
+    name: volume1_mysql
