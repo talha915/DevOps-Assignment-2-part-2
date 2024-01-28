@@ -26,6 +26,24 @@ services:
     networks:
       - my_network
 
+  prometheus:
+    image: prom/prometheus:v2.30.3
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+    networks:
+      - my_network
+
+  grafana:
+    image: grafana/grafana:8.3.3
+    volumes:
+      - ./grafana/provisioning:/etc/grafana/provisioning
+    ports:
+      - "3000:3000"
+    networks:
+      - my_network    
+
 networks:
   my_network:
     driver: bridge

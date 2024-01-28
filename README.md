@@ -31,5 +31,9 @@ choice (e.g.,MySQL, PostgreSQL, MongoDB, etc.).
     docker-compose scale command to create multiple instances of the web service. Verify
     that the web application is accessible and working correctly when scaled.
     - docker-compose up -d --scale web=3 (any number)
+ - Implement a monitoring strategy for the application. This can be achieved by using a tool
+    like Prometheus or Grafana to monitor the health and performance of the containers.
+    - Added functionalities now it will provide real-time monitoring, visual dashboards, and alerts for quick issue detection and performance analysis, enhancing overall system reliability and performance.  
+
  
     
