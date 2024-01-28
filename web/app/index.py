@@ -13,3 +13,7 @@ app.add_middleware(
 @app.get("/")
 async def main():
     return {"message": "Hello, World!"}
+
+@app.get("/new-feature")
+async def new_feature():
+    return {"message": "Hello, New feature!"}    
